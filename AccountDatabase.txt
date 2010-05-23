@@ -1,0 +1,231 @@
+class accounts.SpectatorAccount
+Joe0
+Spectator
+NULL
+class accounts.LeagueOwnerAccount
+Joe1
+League Owner
+NULL
+0
+class accounts.PlayerAccount
+Joe2
+Player
+NULL
+Joe2
+NULL
+class accounts.SpectatorAccount
+Joe3
+Spectator
+NULL
+class accounts.AdminAccount
+Joe4
+Admin
+NULL
+class accounts.LeagueOwnerAccount
+Joe5
+League Owner
+NULL
+0
+class accounts.PlayerAccount
+Joe6
+Player
+NULL
+Joe6
+NULL
+class accounts.AdminAccount
+Joe7
+Admin
+NULL
+class accounts.LeagueOwnerAccount
+Joe8
+League Owner
+NULL
+0
+class accounts.SpectatorAccount
+Joe9
+Spectator
+NULL
+class accounts.LeagueOwnerAccount
+Joe10
+League Owner
+NULL
+0
+class accounts.PlayerAccount
+Joe11
+Player
+NULL
+Joe11
+NULL
+class accounts.LeagueOwnerAccount
+Joe12
+League Owner
+NULL
+0
+class accounts.SpectatorAccount
+Joe13
+Spectator
+NULL
+class accounts.AdminAccount
+Joe14
+Admin
+NULL
+class accounts.LeagueOwnerAccount
+Joe15
+League Owner
+NULL
+0
+class accounts.AdminAccount
+Joe16
+Admin
+NULL
+class accounts.AdminAccount
+Joe17
+Admin
+NULL
+class accounts.LeagueOwnerAccount
+Joe18
+League Owner
+NULL
+0
+class accounts.AdminAccount
+Joe19
+Admin
+NULL
+class accounts.PlayerAccount
+Joe20
+Player
+NULL
+Joe20
+NULL
+class accounts.SpectatorAccount
+Joe21
+Spectator
+NULL
+class accounts.SpectatorAccount
+Joe22
+Spectator
+NULL
+class accounts.AdminAccount
+Joe23
+Admin
+NULL
+class accounts.SpectatorAccount
+Joe24
+Spectator
+NULL
+class accounts.SpectatorAccount
+Joe25
+Spectator
+NULL
+class accounts.SpectatorAccount
+Joe26
+Spectator
+NULL
+class accounts.AdminAccount
+Joe27
+Admin
+NULL
+class accounts.SpectatorAccount
+Joe28
+Spectator
+NULL
+class accounts.PlayerAccount
+Joe29
+Player
+NULL
+Joe29
+NULL
+class accounts.PlayerAccount
+Joe30
+Player
+NULL
+Joe30
+NULL
+class accounts.AdminAccount
+Joe31
+Admin
+NULL
+class accounts.SpectatorAccount
+Joe32
+Spectator
+NULL
+class accounts.SpectatorAccount
+Joe33
+Spectator
+NULL
+class accounts.LeagueOwnerAccount
+Joe34
+League Owner
+NULL
+0
+class accounts.PlayerAccount
+Joe35
+Player
+NULL
+Joe35
+NULL
+class accounts.LeagueOwnerAccount
+Joe36
+League Owner
+NULL
+0
+class accounts.AdminAccount
+Joe37
+Admin
+NULL
+class accounts.PlayerAccount
+Joe38
+Player
+NULL
+Joe38
+NULL
+class accounts.SpectatorAccount
+Joe39
+Spectator
+NULL
+class accounts.AdminAccount
+Joe40
+Admin
+NULL
+class accounts.SpectatorAccount
+Joe41
+Spectator
+NULL
+class accounts.AdminAccount
+Joe42
+Admin
+NULL
+class accounts.PlayerAccount
+Joe43
+Player
+NULL
+Joe43
+NULL
+class accounts.PlayerAccount
+Joe44
+Player
+NULL
+Joe44
+NULL
+class accounts.LeagueOwnerAccount
+Joe45
+League Owner
+NULL
+0
+class accounts.AdminAccount
+Joe46
+Admin
+NULL
+class accounts.LeagueOwnerAccount
+Joe47
+League Owner
+NULL
+0
+class accounts.AdminAccount
+Joe48
+Admin
+NULL
+class accounts.AdminAccount
+Joe49
+Admin
+NULL
