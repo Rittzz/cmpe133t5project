@@ -18,11 +18,36 @@ import accounts.UserType;
  */
 public class PasswordManager
 {  
+    public static final String EXTRA_FILE_EXT = "";
     private PasswordManager()
     {
 	// LALALALAA UTILITY CLASS
     }
 
+    /**
+     * Clears all the password files of everything
+     */
+    public static void purge()
+    {
+	for(UserType t : UserType.values())
+	{
+	    try
+	    {
+		File f = new File(getPasswordFileName(t));
+		FileWriter wr = new FileWriter(f,false); 
+		wr.close();
+	    }
+	    catch(FileNotFoundException e)
+	    {
+		// who cares
+	    }
+	    catch (IOException e)
+	    {
+		// don't care
+	    }
+	}
+    }
+    
     /**
      * Returns the password file name for the give usertype
      * @param u
@@ -30,7 +55,6 @@ public class PasswordManager
      */
     private static String getPasswordFileName(UserType u)
     {
-	final String EXTRA_FILE_EXT = "";
 	String FILE_NAME = EXTRA_FILE_EXT;
 	switch(u){
 	    case ADMIN:
@@ -44,6 +68,9 @@ public class PasswordManager
 		break;
 	    case ADVERTISER:
 		FILE_NAME += AdvertiserPassword.FILE_NAME;
+		break;
+	    case LEAGUE_OWNER:
+		FILE_NAME += LeagueOwnerPassword.FILE_NAME;
 		break;
 	}
 	if(!FILE_NAME.equals(EXTRA_FILE_EXT))
