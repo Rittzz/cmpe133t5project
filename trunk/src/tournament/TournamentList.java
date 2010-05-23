@@ -43,6 +43,31 @@ public class TournamentList extends AbstractTableModel
 	list.add(t);
     }
     
+    public Tournament get(int index)
+    {
+	return list.get(index);
+    }
+    
+    /**
+     * Returns a copy of a list of all the players in the player database,
+     * @return
+     */
+    public ArrayList<Tournament> getAll()
+    {
+	return new ArrayList<Tournament>(list);
+    }
+    
+    public Tournament get(String name)
+    {
+	for(Tournament p : list)
+	{
+	    if(p.getName().equals(name))
+		return p;
+	}
+	System.err.println("WARNING!  Null Tournament returned!");
+	throw null;
+    }
+    
     // Table Methods for displaying this in a JTable
     
     /**

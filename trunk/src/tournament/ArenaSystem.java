@@ -1,6 +1,7 @@
 package tournament;
 
 import accounts.Account;
+import accounts.AccountList;
 import accounts.UserType;
 
 /**
@@ -40,12 +41,13 @@ public final class ArenaSystem
     }
     
     /**
-     * Saves all the data into their respective files.  See the FILE_NAME attribute to where they are actually saved
+     * Saves all the data into their respective files.  See the FILE_NAME attribute in each class to where they are actually saved
      */
     public void save()
     {
 	PlayerList.getInstance().save();
 	TournamentList.getInstance().save();
+	AccountList.getInstance().save();
     }
     
     /**
@@ -55,5 +57,6 @@ public final class ArenaSystem
     {
 	PlayerList.getInstance().load();
 	TournamentList.getInstance().load();
+	AccountList.getInstance().load();
     }
 }

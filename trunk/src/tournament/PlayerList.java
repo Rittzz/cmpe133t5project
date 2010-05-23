@@ -47,6 +47,15 @@ public class PlayerList extends AbstractTableModel
 	return list.get(index);
     }
     
+    /**
+     * Returns a copy of a list of all the players in the player database,
+     * @return
+     */
+    public ArrayList<Player> getAll()
+    {
+	return new ArrayList<Player>(list);
+    }
+    
     public Player get(String name)
     {
 	for(Player p : list)
@@ -54,7 +63,8 @@ public class PlayerList extends AbstractTableModel
 	    if(p.getName().equals(name))
 		return p;
 	}
-	throw new NullPointerException("No player found by " + name);
+	System.err.println("WARNING!  Null Player returned! : " + name);
+	return null;
     }
     
     // TABLE METHODS
@@ -71,7 +81,6 @@ public class PlayerList extends AbstractTableModel
     {
 	return list.size();
     }
-
     
     
     @Override
