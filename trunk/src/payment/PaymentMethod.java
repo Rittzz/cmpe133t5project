@@ -1,6 +1,11 @@
 package payment;
 
-public interface PaymentMethod
+import java.util.Scanner;
+
+import common.Restorable;
+
+
+public interface PaymentMethod extends Restorable
 {
     /**
      * The account in question pays the amount given in the parameter, how that is done is up to the implementing class.  
