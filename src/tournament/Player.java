@@ -1,5 +1,7 @@
 package tournament;
 
+import common.Restorable;
+
 /**
  * Composite Pattern Interface
  * @author Ian Graves

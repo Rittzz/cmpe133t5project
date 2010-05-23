@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
 
+import common.Restorable;
+
 /**
  * The big one, contains all information relevant to a tournament
  * @author Ian Graves

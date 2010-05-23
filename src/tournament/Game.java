@@ -7,6 +7,8 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
+import common.Restorable;
+
 /**
  * A game of two players playing, has a date of when it occurs and a list of observers for the game because I said so
  * @author Ian Graves
