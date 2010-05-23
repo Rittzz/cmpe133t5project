@@ -1,12 +1,13 @@
-class accounts.SpectatorAccount
+class accounts.PlayerAccount
 Joe0
+Player
+NULL
+Joe0
+NULL
+class accounts.SpectatorAccount
+Joe1
 Spectator
 NULL
-class accounts.LeagueOwnerAccount
-Joe1
-League Owner
-NULL
-0
 class accounts.PlayerAccount
 Joe2
 Player
@@ -17,67 +18,70 @@ class accounts.SpectatorAccount
 Joe3
 Spectator
 NULL
-class accounts.AdminAccount
+class accounts.SpectatorAccount
 Joe4
-Admin
+Spectator
 NULL
 class accounts.LeagueOwnerAccount
 Joe5
 League Owner
 NULL
 0
-class accounts.PlayerAccount
+class accounts.LeagueOwnerAccount
 Joe6
-Player
+League Owner
 NULL
-Joe6
-NULL
+0
 class accounts.AdminAccount
 Joe7
 Admin
 NULL
-class accounts.LeagueOwnerAccount
-Joe8
-League Owner
-NULL
-0
 class accounts.SpectatorAccount
-Joe9
+Joe8
 Spectator
 NULL
 class accounts.LeagueOwnerAccount
-Joe10
+Joe9
 League Owner
 NULL
 0
+class accounts.AdminAccount
+Joe10
+Admin
+NULL
 class accounts.PlayerAccount
 Joe11
 Player
 NULL
 Joe11
 NULL
-class accounts.LeagueOwnerAccount
+class accounts.PlayerAccount
 Joe12
-League Owner
+Player
 NULL
-0
-class accounts.SpectatorAccount
-Joe13
-Spectator
+Joe12
 NULL
 class accounts.AdminAccount
-Joe14
+Joe13
 Admin
+NULL
+class accounts.PlayerAccount
+Joe14
+Player
+NULL
+Joe14
+NULL
+class accounts.PlayerAccount
+Joe15
+Player
+NULL
+Joe15
 NULL
 class accounts.LeagueOwnerAccount
-Joe15
+Joe16
 League Owner
 NULL
 0
-class accounts.AdminAccount
-Joe16
-Admin
-NULL
 class accounts.AdminAccount
 Joe17
 Admin
@@ -87,36 +91,41 @@ Joe18
 League Owner
 NULL
 0
-class accounts.AdminAccount
+class accounts.PlayerAccount
 Joe19
+Player
+NULL
+Joe19
+NULL
+class accounts.LeagueOwnerAccount
+Joe20
+League Owner
+NULL
+0
+class accounts.AdminAccount
+Joe21
 Admin
 NULL
 class accounts.PlayerAccount
-Joe20
+Joe22
 Player
 NULL
-Joe20
-NULL
-class accounts.SpectatorAccount
-Joe21
-Spectator
-NULL
-class accounts.SpectatorAccount
 Joe22
-Spectator
 NULL
-class accounts.AdminAccount
+class accounts.LeagueOwnerAccount
 Joe23
+League Owner
+NULL
+0
+class accounts.AdminAccount
+Joe24
 Admin
 NULL
-class accounts.SpectatorAccount
-Joe24
-Spectator
-NULL
-class accounts.SpectatorAccount
+class accounts.LeagueOwnerAccount
 Joe25
-Spectator
+League Owner
 NULL
+0
 class accounts.SpectatorAccount
 Joe26
 Spectator
@@ -129,21 +138,18 @@ class accounts.SpectatorAccount
 Joe28
 Spectator
 NULL
-class accounts.PlayerAccount
+class accounts.SpectatorAccount
 Joe29
-Player
+Spectator
 NULL
-Joe29
-NULL
-class accounts.PlayerAccount
+class accounts.LeagueOwnerAccount
 Joe30
-Player
+League Owner
 NULL
-Joe30
-NULL
-class accounts.AdminAccount
+0
+class accounts.SpectatorAccount
 Joe31
-Admin
+Spectator
 NULL
 class accounts.SpectatorAccount
 Joe32
@@ -164,68 +170,75 @@ Player
 NULL
 Joe35
 NULL
-class accounts.LeagueOwnerAccount
+class accounts.PlayerAccount
 Joe36
+Player
+NULL
+Joe36
+NULL
+class accounts.LeagueOwnerAccount
+Joe37
 League Owner
 NULL
 0
-class accounts.AdminAccount
-Joe37
-Admin
+class accounts.LeagueOwnerAccount
+Joe38
+League Owner
 NULL
+0
 class accounts.PlayerAccount
-Joe38
-Player
-NULL
-Joe38
-NULL
-class accounts.SpectatorAccount
 Joe39
-Spectator
+Player
 NULL
-class accounts.AdminAccount
+Joe39
+NULL
+class accounts.PlayerAccount
 Joe40
-Admin
+Player
 NULL
-class accounts.SpectatorAccount
+Joe40
+NULL
+class accounts.LeagueOwnerAccount
 Joe41
-Spectator
+League Owner
 NULL
-class accounts.AdminAccount
+0
+class accounts.LeagueOwnerAccount
 Joe42
-Admin
+League Owner
 NULL
-class accounts.PlayerAccount
+0
+class accounts.LeagueOwnerAccount
 Joe43
-Player
+League Owner
 NULL
-Joe43
-NULL
-class accounts.PlayerAccount
+0
+class accounts.SpectatorAccount
 Joe44
-Player
-NULL
-Joe44
+Spectator
 NULL
 class accounts.LeagueOwnerAccount
 Joe45
 League Owner
 NULL
 0
-class accounts.AdminAccount
+class accounts.PlayerAccount
 Joe46
-Admin
+Player
 NULL
-class accounts.LeagueOwnerAccount
+Joe46
+NULL
+class accounts.SpectatorAccount
 Joe47
-League Owner
+Spectator
 NULL
-0
-class accounts.AdminAccount
+class accounts.SpectatorAccount
 Joe48
-Admin
+Spectator
 NULL
-class accounts.AdminAccount
+class accounts.PlayerAccount
 Joe49
-Admin
+Player
+NULL
+Joe49
 NULL
