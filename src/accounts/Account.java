@@ -26,7 +26,7 @@ public abstract class Account implements Restorable
     
     /**
      * Used for create a completely new account, updates the password file too.  DO NOT USE TO JUST CREATE ONE JUST CAUSE!!!!!!
-     * For getting a pre-existing account, use AccountList
+     * For getting a pre-existing account, use AccountList.  This will automatically add the new account to the account list
      * @param type
      * @param name
      * @param pass
@@ -39,6 +39,8 @@ public abstract class Account implements Restorable
 	payMethod = null;
 	if(!PasswordManager.createAccount(type, name, pass))
 	    throw new AccountExistException();
+	else
+	    AccountList.getInstance().add(this);
     }
     
     /**

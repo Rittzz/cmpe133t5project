@@ -5,9 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
-
-import tournament.Tournament;
 
 public class NotificationManager
 {
@@ -70,6 +69,21 @@ public class NotificationManager
 	for(Message m : removeList)
 	{
 	    list.remove(m);
+	}
+    }
+    
+    /**
+     * Removes all notifications from the database who's id matches the userName
+     * @param userName
+     */
+    public void removeAll(String userName)
+    {
+	Iterator<Message> itr = list.iterator();
+	while(itr.hasNext())
+	{
+	    Message m = itr.next();
+	    if(m.getId().equals(userName))
+		itr.remove();
 	}
     }
     

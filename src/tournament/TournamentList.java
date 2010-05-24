@@ -12,7 +12,7 @@ import javax.swing.table.AbstractTableModel;
 import common.Observer;
 
 /**
- * Contains a list a tournaments, implements the singleton design pattern.  Easy to insert into a JTable
+ * Contains a list a tournaments, implements the singleton design pattern.  Easy to insert into a JTable.
  * @author Ian Graves
  *
  */
@@ -21,7 +21,6 @@ public class TournamentList extends AbstractTableModel
     private static final String FILE_NAME = "TournamentDatabase.txt";
     private static final TournamentList INSTANCE = new TournamentList();
 
-    private boolean loaded = false;
     private ArrayList<Tournament> list;
     
     private TournamentList()
@@ -40,7 +39,7 @@ public class TournamentList extends AbstractTableModel
     {
 	if(list.contains(t))
 	{
-	    throw new Error("BLABLA");
+	    throw new Error("Tournament " + t.getName() + " already exist in the Database");
 	}
 	list.add(t);
     }
@@ -48,6 +47,11 @@ public class TournamentList extends AbstractTableModel
     public Tournament get(int index)
     {
 	return list.get(index);
+    }
+    
+    public int size()
+    {
+	return getRowCount();
     }
     
     /**

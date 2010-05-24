@@ -129,6 +129,25 @@ public class Tournament implements Restorable
 		currentRound.addGame(new Game(players.get(i),players.get(i+1)));
 	    }
 	}
+	else
+	{
+	    System.err.println("Tournament " + getName() + " is already setup!  This call is worthless");
+	}
+    }
+    
+    /**
+     * If you are seeding manually (initially), call this method instead.  Note this DOES NOT CHECK if the players in this round are actually in the tournament!
+     * The round must be fully populated with games to work.  THIS METHOD IS UNSAFE!!!!
+     * @param round
+     */
+    public void setupTournament(TournamentRound round)
+    {
+	if(!isPlaying && !finished)
+	{
+	    isPlaying = true;
+	    // Make Initial Round here
+	    currentRound = round;
+	}
     }
     
     public ArrayList<Player> getPlayers()
