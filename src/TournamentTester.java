@@ -1,6 +1,8 @@
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import notifications.Message;
+import notifications.NotificationManager;
 import tournament.ArenaSystem;
 import tournament.DateUtility;
 import tournament.PlayerList;
@@ -9,6 +11,7 @@ import tournament.Sport;
 import tournament.Team;
 import tournament.Tournament;
 import tournament.TournamentList;
+import tournament.TournamentType;
 
 
 public class TournamentTester
@@ -39,16 +42,22 @@ public class TournamentTester
 	
 	// Try out basic tournament functions
 	populatePlayerList();
-	//ArenaSystem.getInstance().load();
+	ArenaSystem.getInstance().load();
+	//populateNotifications(50);
 	System.out.println(PlayerList.getInstance());
 	
-	Tournament testTournament = new Tournament("Test", DateUtility.parseNormalDate("5/26/1988"), Sport.BASEBALL, 8);
+	Tournament testTournament = new Tournament("Test", DateUtility.parseNormalDate("5/26/1988"), Sport.BASEBALL, TournamentType.SINGLE, 8);
 	
 	PlayerList pList = PlayerList.getInstance();
 	
 	for(int i = 0; i < 8; i++)
 	{
 	    testTournament.addPlayer(pList.get(i));
+	}
+	
+	for(Message m : NotificationManager.getInstance().getAll())
+	{
+	    System.out.println(m);
 	}
 	
 	TournamentList tList = TournamentList.getInstance();
@@ -65,7 +74,7 @@ public class TournamentTester
 	
 	Calendar date = GregorianCalendar.getInstance();
 	System.out.println("Date = " + DateUtility.toFormalDate(date));
-	//ArenaSystem.getInstance().save();
+	ArenaSystem.getInstance().save();
     }
     
     /**
@@ -85,7 +94,18 @@ public class TournamentTester
 	myTeam.addPlayer(pList.get(1));
 	myTeam.addPlayer(pList.get(2));
 	pList.addPlayer(myTeam);
-	ArenaSystem.getInstance().save();
+	//ArenaSystem.getInstance().save();
+    }
+    
+    public static void populateNotifications(int amt)
+    {
+	NotificationManager mn = NotificationManager.getInstance();
+	
+	for(int i = 0; i < amt; i++)
+	{
+	    Message m = new Message("Bob","Test Message " + i);
+	    mn.addNotification(m);
+	}
     }
     
     public static void populateTournamentList(int amt)
@@ -93,7 +113,7 @@ public class TournamentTester
 	TournamentList tList = TournamentList.getInstance();
 	for(int i = 0; i < amt; i++)
 	{
-	    Tournament testTournament = new Tournament("Test " + i, DateUtility.getDate(0, 11, 2011), Sport.BASEBALL, 8);
+	    Tournament testTournament = new Tournament("Test " + i, DateUtility.getDate(0, 11, 2011), Sport.BASEBALL,TournamentType.SINGLE, 8);
 	    PlayerList pList = PlayerList.getInstance();
 	    for(int j = 0; j < 8; j++)
 	    {
@@ -102,6 +122,6 @@ public class TournamentTester
 	    testTournament.setupTournament();
 	    tList.addTournament(testTournament);
 	}
-	ArenaSystem.getInstance().save();
+	//ArenaSystem.getInstance().save();
     }
 }

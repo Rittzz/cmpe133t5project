@@ -7,6 +7,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
+import common.Observer;
 import common.Restorable;
 
 /**
@@ -98,7 +99,7 @@ public class Game implements Restorable
 		}
         	for(Observer<Game> o: obsList)
         	{
-        	    o.update(this);
+        	    o.alert(this);
         	}
 	    }
 	    else

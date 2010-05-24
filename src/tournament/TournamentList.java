@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 import javax.swing.table.AbstractTableModel;
 
+import common.Observer;
+
 /**
  * Contains a list a tournaments, implements the singleton design pattern.  Easy to insert into a JTable
  * @author Ian Graves
@@ -92,6 +94,10 @@ public class TournamentList extends AbstractTableModel
 		return "Sport";
 	    case 2:
 		return "Start Date";
+	    case 3:
+		return "Player Type";
+	    case 4:
+		return "Spots Available";
 	}
 	return "ERROR";
     }
@@ -107,6 +113,10 @@ public class TournamentList extends AbstractTableModel
 		return current.getMySport();
 	    case 2:
 		return DateUtility.toNormalDate(current.getStartDate());
+	    case 3:
+		return current.getType().toLabel();
+	    case 4:
+		return current.getPlayerCount()-current.getCurrentPlayerCount();
 	}
 	
 	return "NO VALUE FOUND!";
@@ -183,5 +193,25 @@ public class TournamentList extends AbstractTableModel
 	    System.err.println("Error Parsing Player database File");
 	}
 	
+    }
+    
+    public void addObserverToTournament(Observer<Tournament> obs, String[] listNames)
+    {
+	for(String tName : listNames)
+	{
+	    boolean found = false;
+	    for(Tournament t : list)
+	    {
+		if(t.getName().equals(tName))
+		{
+		    found = true;
+		    t.addObserver(obs);
+		}
+	    }
+	    if(!found)
+	    {
+		System.err.println("Could not find a Tournament named " + tName + " to add to " + obs);
+	    }
+	}
     }
 }
