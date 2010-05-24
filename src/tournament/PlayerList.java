@@ -47,6 +47,11 @@ public class PlayerList extends AbstractTableModel
 	return list.get(index);
     }
     
+    public int size()
+    {
+	return getRowCount();
+    }
+    
     /**
      * Returns a copy of a list of all the players in the player database,
      * @return
