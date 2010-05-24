@@ -18,8 +18,8 @@ import tournament.TournamentList;
  */
 public class PlayerAccount extends Account
 {
-    Player myPlayer;
-    Tournament myTournament;
+    private Player myPlayer;
+    private Tournament myTournament;
     
     public PlayerAccount(String name, String pass)
     {
@@ -32,6 +32,11 @@ public class PlayerAccount extends Account
     public void setTournament(Tournament t)
     {
 	myTournament = t;
+    }
+    
+    public Player getPlayer()
+    {
+	return myPlayer;
     }
     
     public Tournament getTournament()

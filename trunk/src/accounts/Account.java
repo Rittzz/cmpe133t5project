@@ -26,7 +26,7 @@ public abstract class Account implements Restorable
     
     /**
      * Used for create a completely new account, updates the password file too.  DO NOT USE TO JUST CREATE ONE JUST CAUSE!!!!!!
-     * 
+     * For getting a pre-existing account, use AccountList
      * @param type
      * @param name
      * @param pass

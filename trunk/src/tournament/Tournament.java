@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
 
+import common.Observer;
 import common.Restorable;
 
 /**
@@ -15,6 +16,8 @@ import common.Restorable;
  */
 public class Tournament implements Restorable
 {
+    private ArrayList<Observer<Tournament>> observers;
+    
     private String name; // The name of the tournament
     private Calendar startDate; // date
     
@@ -29,7 +32,9 @@ public class Tournament implements Restorable
     
     private Player winningTeam; // The winning team
     
-    public Tournament(String n, Calendar date, Sport sp, int maxPlayer)
+    private TournamentType myType;
+    
+    public Tournament(String n, Calendar date, Sport sp, TournamentType ty, int maxPlayer)
     {
 	name = n;
 	playerCount = maxPlayer;
@@ -39,6 +44,8 @@ public class Tournament implements Restorable
 	isPlaying = false;
 	finished = false;
 	winningTeam = null;
+	observers = new ArrayList<Observer<Tournament>>();
+	myType = ty;
     }
     
     public String getName()
@@ -59,6 +66,11 @@ public class Tournament implements Restorable
     public int getPlayerCount()
     {
         return playerCount;
+    }
+    
+    public int getCurrentPlayerCount()
+    {
+        return players.size();
     }
     
     public boolean isFinished()
@@ -90,6 +102,16 @@ public class Tournament implements Restorable
 	return false;
     }
     
+    public void addObserver(Observer<Tournament> o)
+    {
+	observers.add(o);
+    }
+    
+    public void removeObsever(Observer<Tournament> o)
+    {
+	observers.remove(o);
+    }
+    
     /**
      * Once all the players have been added to the tournament(exactly the amount given in the playerCount, this will set up the initial tournament round 
      * which will propagate from there
@@ -112,6 +134,16 @@ public class Tournament implements Restorable
     public ArrayList<Player> getPlayers()
     {
         return players;
+    }
+    
+    public boolean isSeedable()
+    {
+	return currentRound.isFinished();
+    }
+    
+    public TournamentType getType()
+    {
+	return myType;
     }
     
     /**
@@ -207,7 +239,8 @@ public class Tournament implements Restorable
 	int actualCount = Integer.parseInt(r.nextLine());
 	boolean play = Boolean.parseBoolean(r.nextLine());
 	boolean finished = Boolean.parseBoolean(r.nextLine());
-	Tournament newT = new Tournament(name, date, mySport, pCount);
+	TournamentType ty = TournamentType.valueOf(r.nextLine());
+	Tournament newT = new Tournament(name, date, mySport, ty, pCount);
 	newT.isPlaying = play;
 	newT.finished = finished;
 	for(int i = 0; i < actualCount; i++)
@@ -233,6 +266,7 @@ public class Tournament implements Restorable
 	wr.write(players.size()+"\n");
 	wr.write(isPlaying+"\n");
 	wr.write(finished+"\n");
+	wr.write(myType+"\n");
 	for(Player p : players)
 	{
 	    wr.write(p.getName()+"\n");

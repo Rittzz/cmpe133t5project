@@ -1,5 +1,6 @@
 package tournament;
 
+import notifications.NotificationManager;
 import accounts.Account;
 import accounts.AccountList;
 import accounts.UserType;
@@ -45,6 +46,7 @@ public final class ArenaSystem
      */
     public void save()
     {
+	NotificationManager.getInstance().save();
 	PlayerList.getInstance().save();
 	TournamentList.getInstance().save();
 	AccountList.getInstance().save();
@@ -55,6 +57,7 @@ public final class ArenaSystem
      */
     public void load()
     {
+	NotificationManager.getInstance().load();
 	PlayerList.getInstance().load();
 	TournamentList.getInstance().load();
 	AccountList.getInstance().load();
