@@ -67,6 +67,19 @@ public class PlayerList extends AbstractTableModel
 	return null;
     }
     
+    public boolean remove(String name)
+    {
+	for(Player p : list)
+	{
+	    if(p.getName().equals(name))
+	    {
+		list.remove(p); // This might crash?
+		return true;
+	    }
+	}
+	return false;
+    }
+    
     // TABLE METHODS
     
     /**

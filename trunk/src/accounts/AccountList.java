@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import notifications.NotificationManager;
+
+import passwordChecker.PasswordManager;
 import payment.PaymentDatabase;
 import tournament.Tournament;
 
@@ -37,6 +40,36 @@ public class AccountList
 		return act;
 	}
 	return null;
+    }
+    
+    /**
+     * Call this method to remove an account from file along with all of it's notifications
+     * @param name
+     * @return
+     */
+    public boolean removeAccount(String name)
+    {
+	for(Account act : list)
+	{
+	    if(name.equals(act.getName()))
+	    {
+		PasswordManager.deleteAccount(act.getType(), act.getName());
+		NotificationManager.getInstance().removeAll(act.getName());
+		return true;
+	    }
+	}
+	return false;
+    }
+    
+    public boolean removeAccount(Account act)
+    {
+	if(list.contains(act))
+	{
+	    PasswordManager.deleteAccount(act.getType(), act.getName());
+	    NotificationManager.getInstance().removeAll(act.getName());
+	    return true;
+	}
+	return false;
     }
     
     public void add(Account act)
