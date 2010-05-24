@@ -41,6 +41,11 @@ public final class ArenaSystem
 	return currentAccount.getType();
     }
     
+    public void purge()
+    {
+	
+    }
+    
     /**
      * Saves all the data into their respective files.  See the FILE_NAME attribute in each class to where they are actually saved
      */
