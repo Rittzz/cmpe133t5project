@@ -43,7 +43,7 @@ public final class ArenaSystem
     
     public void purge()
     {
-	
+	// Do Nothing for now
     }
     
     /**

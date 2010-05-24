@@ -215,7 +215,7 @@ public class PlayerList extends AbstractTableModel
 		    t.loadPlayers();
 		}
 	    }
-	}
+	}// lala
 	catch(FileNotFoundException e)
 	{
 	    System.err.println("File player database not found");
