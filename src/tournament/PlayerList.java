@@ -169,7 +169,6 @@ public class PlayerList extends AbstractTableModel
 	    {
 		p.saveFile(wr);
 	    }
-	    wr.write("end");
 	    wr.close();
 	}
 	catch(IOException e)
@@ -189,9 +188,9 @@ public class PlayerList extends AbstractTableModel
 	    list.clear();
 	    File db = new File(FILE_NAME);
 	    Scanner re = new Scanner(db);
-	    String cl = re.nextLine();
-	    while(!cl.equals("end"))
+	    while(re.hasNext())
 	    {
+		String cl = re.nextLine();
 		if(cl.equals(SinglePlayer.class.getName()))
 		{
 		    SinglePlayer p = SinglePlayer.readFile(re);
@@ -206,7 +205,6 @@ public class PlayerList extends AbstractTableModel
 		{
 		    throw new IOException();
 		}
-		cl = re.nextLine();
 	    }
 	    // First read complete now lets fix the teams...
 	    for(Player p: list)
